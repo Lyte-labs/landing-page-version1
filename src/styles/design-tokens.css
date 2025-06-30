@@ -1,0 +1,36 @@
+:root {
+  /* Light Mode Colors */
+  --background: #ffffff;
+  --foreground: #1c1111;
+
+  /* Custom Brand Colors */
+  --color-text-base: #333333;
+  --color-accent-yellow: #F5B301;
+  --color-accent-yellow-hover: #E0A800;
+  --color-divider: #EEEEEE;
+
+  /* Button Radius */
+  --radius-button: 4px;
+
+  /* Typography Sizes & Weights */
+  --text-h1-size: 46px;
+  --text-h2-size: 30px;
+  --text-h3-size: 22px;
+  --text-body-size: 16px;
+  --line-height-body: 1.6;
+  --font-weight-bold: 600;
+  --font-weight-semi: 500;
+  --font-weight-regular: 400;
+
+  /* Font Families (from next/font) with fallback) */
+  --font-sans: var(sans-serif);
+  --font-mono: var(monospace);
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100404c6;
+    --foreground: #ededed;
+  }
+}
