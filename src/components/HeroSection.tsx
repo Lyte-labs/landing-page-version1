@@ -23,14 +23,14 @@ export default function HeroSection() {
       {/* Mobile Layout */}
       <div className="flex flex-col items-center justify-start pt-20 pb-0 text-center text-white sm:hidden">
       
-        <motion.h2
+        <motion.h1
           className="text-2xl font-extrabold leading-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
          <i>Smarter Rides, Elevated Vibes</i>
-        </motion.h2>
+        </motion.h1>
 
         <motion.h3
           className="mt-2 text-sm text-gray-300"
