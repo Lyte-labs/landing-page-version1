@@ -61,8 +61,8 @@ export default function Button(props: Props) {
     size = 'md',
     children,
     className = '',
-    whileHover = { scale: 1.05 },
-    whileTap = { scale: 0.95 },
+    // whileHover = { scale: 1.0 },
+    // whileTap = { scale: 0.95 },
     ...rest
   } = props
 
@@ -78,14 +78,14 @@ export default function Button(props: Props) {
       {as === 'button' ? (
         <m.button
           {...(rest as ButtonProps)}
-          whileHover={whileHover}
-          whileTap={whileTap}
+          // whileHover={whileHover}
+          // whileTap={whileTap}
           className={baseClasses}
         >
           {children}
         </m.button>
       ) : (
-        <m.div whileHover={whileHover} whileTap={whileTap}>
+        <m.div >
           <Link {...(rest as LinkProps)} className={baseClasses}>
             {children}
           </Link>

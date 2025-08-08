@@ -1,97 +1,131 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { Zap, Layers, Bike, Settings } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Zap, Layers, Bike, Settings } from "lucide-react";
+import Button from "./Button";
+
+const features = [
+  {
+    id: 1,
+    title: "Live Ride Updates",
+    description:
+      "You don't have to guess how much distance you have covered any longer, you can see everything in real time, as clear as day",
+    icon: <Zap size={32} />,
+  },
+  {
+    id: 2,
+    title: "Anti-Theft",
+    description:
+      "The bike is yours, hence we have in-build technology to help make sure it stays yours, no one is allowed to steal it ever",
+    icon: <Layers size={32} />,
+  },
+  {
+    id: 3,
+    title: "Zero Paddling",
+    description:
+      "You can get going without even breaking or stopping at intervals to catch your breath, let the motor do the work while you enjoy the view of the environment while moving with ease",
+    icon: <Bike size={32} />,
+  },
+  {
+    id: 4,
+    title: "Removable Battery",
+    description:
+      "Battery low? Don't worry about it, you can easily remove the battery and swap it for a fully charged one at one of our swapping shops around you",
+    icon: <Settings size={32} />,
+  },
+];
 
 export default function LytePackFeaturesSection() {
   return (
-    <section id="feature" className="bg-black text-white pb-10 px-4">
-      <div className="max-w-6xl mx-auto space-y-16">
-
+    <section
+      id="feature"
+      className="bg-transparent text-white px-4 py-6 sm:px-8 sm:py-12 lg:px-20 lg:py-20"
+    >
+      <div className="mx-auto w-full space-y-6 sm:space-y-12 lg:space-y-16">
         {/* Header */}
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto"
+          className="w-full max-w-5xl text-left space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-300 bg-clip-text text-transparent">
-            LytePack Features & Benefits
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300">
-            Engineered for power, reliability, and total freedom.
-          </p>
+          {" "}
+          <div className="sm:hidden pr-4">
+            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
+              Smarts That Move You Without you stressing
+            </h2>
+          </div>
+          <h1 className="hidden sm:block text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
+            Smarts That Move You Without you stressing
+          </h1>
+          <h3 className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-lg">
+            Unlock next-level features that make every ride safer, smoother,
+            faster and on top of it all, stress-free
+          </h3>
         </motion.div>
 
         {/* Features Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 md:gap-12 lg:gap-16 min-w-fit"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
           variants={{
             hidden: {},
             visible: { transition: { staggerChildren: 0.2 } },
           }}
         >
-          {[
-            {
-              title: 'Fast Charging',
-              description: 'Recharge in under 3 hours from solar or wall.',
-              image: '/LytePack_plug_Clean.avif',
-              icon: <Zap size={32} />,
-            },
-            {
-              title: 'Massive Capacity',
-              description: '1000Wh output for lights, fan, TV, laptops.',
-              image: '/home_with_lytepack.avif',
-              icon: <Layers size={32} />,
-            },
-            {
-              title: 'EVU E-Bike Integration',
-              description: 'Detachable design powers your EVU electric bike.',
-              image: '/Battery Integration.jpg',
-              icon: <Bike size={32} />,
-            },
-            {
-              title: 'Smart Power Management',
-              description: 'LED status, battery protection, USB ports.',
-              image: '/workstation.jpg',
-              icon: <Settings size={32} />,
-            },
-          ].map((feature, idx) => (
+          {features.map((feature) => (
             <motion.div
-              key={idx}
-              className="flex flex-col md:flex-row items-center gap-6 bg-gradient-to-b from-gray-900 via-gray-800 to-black rounded-xl p-6 border border-gray-700 hover:border-amber-400 transition"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              key={feature.id}
+              initial={{ opacity: 0, y: 80, rotate: -60 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className={`relative w-full ${
+                feature.id === 3
+                  ? "lg:translate-x-16"
+                  : feature.id === 4
+                  ? "lg:translate-x-20"
+                  : ""
+              }`}
             >
-              <div className="relative w-full md:w-1/2 h-64 rounded-lg overflow-hidden">
-               <Image
-  src={feature.image}
-  alt={feature.title}
-  fill
-  sizes="(min-width: 768px) 50vw, 100vw"
-  className="object-cover"
-/>
-
-              </div>
-              <div className="md:w-1/2 space-y-3 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start text-amber-400">
-                  {feature.icon}
+              <div className="bg-[#1c1b22] border border-white/70 rounded-xl p-4 sm:p-6 lg:p-8 flex flex-col justify-between min-h-[180px] sm:min-h-[220px] lg:min-h-[250px] w-full max-w-sm mx-auto shadow-lg">
+                <h2 className="text-white text-base sm:text-lg lg:text-xl font-extrabold mb-2 sm:mb-3 lg:mb-4">
+                  {feature.title}
+                </h2>
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex items-center justify-center bg-white text-[#1c1b22] rounded-2xl flex-shrink-0">
+                    {feature.icon}
+                  </div>
+                  <p className="text-white text-xs sm:text-sm lg:text-base leading-snug">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
+        {/* Connect Button */}
+        <div className="flex justify-start">
+          <Button
+            variant="outline"
+            size="sm"
+            href="/contact-us"
+            className="mt-2 sm:mt-6
+                     inline-flex justify-center items-center 
+                      py-2 px-12 
+                     rounded-2xl border border-gray-300
+                     bg-white text-gray-900 font-medium shadow-sm
+                     hover:bg-transparent hover:text-white 
+                     focus:outline-none focus:ring-4 focus:ring-accent/30
+                     transition-colors duration-300
+                     text-lg"
+          >
+            Connect
+          </Button>
+        </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import AnimatedNavbar from "@/components/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -14,13 +14,15 @@ import Footer from "@/components/Footer/Footer";
 //   variable: "--font-geist-mono",
 //   subsets: ["latin"],
 // });
+const inter = Inter({
+  subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Lytelabs",
-  description: "Lytelabs - Join the green future",
+  title: "Lytelabs-EV bike",
+  description: "Smarter Rides, Elevated Vibes",
   openGraph: {
-    title: "Lytelabs",
-    description: "Join the green future with modular energy and mobility solutions.",
+    title: "Lytelabs-EV bike",
+    description: "Power Your Journey with Innovation ",
     url: "https://lytelabs.com",
     siteName: "Lytelabs",
     images: [
@@ -51,12 +53,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+     <html lang="en" className={inter.className}>
       <body
-        className={`antialiased bg-white text-black dark:bg-black dark:text-white`}
+        className={`antialiased `}
       >
         <AnimatedNavbar />
-        <main className="pt-16">
+        <main className="bg-[#1c1b22 text-white min-h-screen ">
           {children}
         </main>
         <Footer />
