@@ -111,6 +111,9 @@ const config: Config = {
         divider: '#E5E7EB',
         dividerDark: '#4B5563',
       },
+            fontFamily: {
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
 
       // Responsive typography system
       fontSize: {

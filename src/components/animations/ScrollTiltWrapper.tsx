@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import Image from "next/image";
 
 // Sharp and snappy spring config
 const defaultSpring = {
@@ -8,21 +9,41 @@ const defaultSpring = {
   mass: 1,
 };
 
+// Define proper TypeScript interfaces
+interface ScrollTiltWrapperProps {
+  children: React.ReactNode;
+  rotateAmplitude?: number;
+  springConfig?: {
+    damping: number;
+    stiffness: number;
+    mass: number;
+  };
+  offset?: ["start start" | "start center" | "start end", "end start" | "end center" | "end end"];
+}
+
+interface TiltedCardExampleProps {
+  imageSrc?: string;
+  altText?: string;
+  captionText?: string;
+  width?: number;
+  height?: number;
+}
+
 /**
  * ScrollTiltWrapper
  * A reusable wrapper that tilts its children based on scroll position.
  * @param {React.ReactNode} children - Elements to animate.
  * @param {number} rotateAmplitude - Maximum degrees to tilt at start.
  * @param {object} springConfig - Framer spring config (damping, stiffness, mass).
- * @param {Array<string>} offset - Viewport scroll offsets ["start end", "end start"].
+ * @param {Array} offset - Viewport scroll offsets.
  */
 export function ScrollTiltWrapper({
   children,
   rotateAmplitude = 16,
   springConfig = defaultSpring,
-  offset = ["start 0.8", "end 0.2"],
-}) {
-  const ref = useRef(null);
+  offset = ["start center", "end center"],
+}: ScrollTiltWrapperProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset });
 
   // Trigger tilt around 20% to 80% of scroll visibility range
@@ -45,20 +66,22 @@ export function ScrollTiltWrapper({
 
 // Example: Wrapping an image card
 export default function TiltedCardExample({
-  imageSrc = "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+  imageSrc = "",
   altText = "Tilted card image",
   captionText = "",
-  width = "300px",
-  height = "300px",
-}) {
+  width = 300,
+  height = 300,
+}: TiltedCardExampleProps) {
   return (
     <figure className="w-full h-full flex items-center justify-center">
       <ScrollTiltWrapper>
-        <img
+        <Image
           src={imageSrc}
           alt={altText}
+          width={width}
+          height={height}
           className="object-cover rounded-[15px] will-change-transform"
-          style={{ width, height }}
+          priority={false}
         />
       </ScrollTiltWrapper>
       {captionText && (

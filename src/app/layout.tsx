@@ -1,24 +1,19 @@
 // app/layout.tsx
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+// import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import AnimatedNavbar from "@/components/Navbar";
 import Footer from "@/components/Footer/Footer";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-const inter = Inter({
-  subsets: ["latin"] })
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1c1b22',
+}
 
 export const metadata: Metadata = {
-  title: "Lytelabs-EV bike",
+  metadataBase: new URL('https://lytelabs.com'),
+  title: "Lytelabs EV-Bike- Smart E-Bikes for the Modern Commuter",
   description: "Smarter Rides, Elevated Vibes",
   openGraph: {
     title: "Lytelabs-EV bike",
@@ -27,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Lytelabs",
     images: [
       {
-        url: "/lytelabs_logo.jpeg",
+        url: "/lytelabs_logo.png",
         width: 1200,
         height: 630,
         alt: "Lytelabs Hero Image",
@@ -38,29 +33,31 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lytelabs",
-    description: "Join the green future with modular energy and mobility solutions.",
-    images: ["/lytelabs_logo.jpeg"],
+    description:
+      "Join the green future with modular energy and mobility solutions.",
+    images: ["/lytelabs_logo.png"],
   },
   icons: {
-    icon: "/lytelabs_logo.jpeg",
-    apple: "/lytelabs_logo.jpeg",
+    icon: [
+      { url: "/lytelabs_logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/lytelabs_logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/lytelabs_logo.png", sizes: "180x180", type: "image/png" }],
+  },
+  other: {
+    "theme-color": "#1c1b22",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-     <html lang="en" className={inter.className}>
-      <body
-        className={`antialiased `}
-      >
+    <html lang="en">
+      <body className="antialiased font-inter">
         <AnimatedNavbar />
-        <main className="bg-[#1c1b22 text-white min-h-screen ">
-          {children}
-        </main>
+        <main className="bg-[#1c1b22 text-white min-h-screen ">{children}</main>
         <Footer />
       </body>
     </html>

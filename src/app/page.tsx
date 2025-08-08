@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <div >
         <div>
-          <title>LytePack - Smart E-Bikes</title>
+          <title>LyteLabs - Smart E-Bikes</title>
           <meta
             name="description"
-            content="LytePack - Smart E-Bikes for the Modern Commuter"
+            content="LyteLabs - Smart E-Bikes for the Modern Commuter"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </div>

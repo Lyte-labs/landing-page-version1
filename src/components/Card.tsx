@@ -1,6 +1,5 @@
 // components/InfoCard.tsx
 import React from 'react';
-import Image from 'next/image';
 
 interface InfoCardProps {
   title: string;

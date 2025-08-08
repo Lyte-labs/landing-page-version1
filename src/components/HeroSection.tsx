@@ -53,7 +53,7 @@ export default function HeroSection() {
         <div className="w-full">
           <Image
             src="/bike_hero.avif"
-            alt="LytePack Hero"
+            alt="LyteLabs Ev-Bike Hero"
             width={1000}
             height={600}
             className="w-full h-auto object-cover block"
@@ -72,7 +72,7 @@ export default function HeroSection() {
         >
           <Image
             src="/bike_hero.avif"
-            alt="LytePack Hero"
+            alt="LyteLabs Ev-Bike Hero"
             fill
             sizes="100vw"
             className="object-cover object-center"
