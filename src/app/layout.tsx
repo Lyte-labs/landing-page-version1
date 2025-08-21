@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata, Viewport } from "next";
 // import { Inter } from "next/font/google";
+import '../styles/design-tokens.css'
 import "../styles/globals.css";
 import AnimatedNavbar from "@/components/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -55,9 +56,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased font-inter">
+      <body className="antialiased font-inter ">
         <AnimatedNavbar />
-        <main className="bg-[#1E1E1E text-white min-h-screen ">{children}</main>
+        <main className="bg-[#1E1E1E text-white min-h-screen  ">{children}</main>
         <Footer />
       </body>
     </html>

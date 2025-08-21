@@ -44,7 +44,7 @@ body {
 /* Base reset & theme */
 html, body {
   /* background-color: var(--background); */
-  color: var(--color-text-base);
+  /* color: var(--color-text-base); */
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: var(--text-body-size);
   line-height: var(--line-height-body);

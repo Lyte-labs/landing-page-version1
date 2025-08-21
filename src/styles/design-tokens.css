@@ -9,13 +9,29 @@
   --radius-button: 4px;
 
   /* Typography Sizes & Weights */
-  --text-h1-size: 60px;
+  /* --text-h1-size: 60px;
   --text-h2-size: 40px;
   --text-h3-size: 18px;
   --text-body-size: 18px;
   --line-height-body: 1.6;
   --font-weight-bold: 600;
   --font-weight-semi: 500;
+  --font-weight-regular: 400; */
+    /* Headings */
+  --text-h1-size: clamp(28px, 5vw, 60px);
+  --text-h2-size: clamp(24px, 4vw, 40px);
+  --text-h3-size: clamp(20px, 3.5vw, 28px);
+  --text-h4-size: clamp(18px, 3vw, 24px);
+  --text-h5-size: clamp(16px, 2.5vw, 20px);
+  --text-h6-size: clamp(14px, 2vw, 18px);
+
+  /* Body text */
+  --text-body-size: clamp(14px, 2vw, 18px);
+  --line-height-body: 1.6;
+
+  /* Font weights */
+  --font-weight-bold: 700;
+  --font-weight-semi: 600;
   --font-weight-regular: 400;
 
   /* Font Families (from next/font) with fallback) */
