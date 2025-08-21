@@ -35,7 +35,7 @@ export default function CustomerStories({
                 {testimonial.quote}
               </p>
               <i className="mt-auto">
-                <p className="text-white font-medium text-sm sm:text-base">
+                <p className="text-white font-medium text-sm sm:text-base italic">
                   {testimonial.author}
                   {testimonial.title}
                 </p>

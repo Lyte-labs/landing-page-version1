@@ -19,7 +19,7 @@
   --font-weight-regular: 400; */
     /* Headings */
   --text-h1-size: clamp(28px, 5vw, 50px);
-  --text-h2-size: clamp(20px, 4vw, 30px);
+  --text-h2-size: clamp(26px, 4vw, 30px);
   --text-h3-size: 18px;
   --text-body-size: 18px;
   /* --text-h3-size: clamp(12px, 3.5vw, 18px); */
