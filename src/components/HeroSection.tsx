@@ -29,7 +29,7 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-         Smarter Rides, Elevated Vibes
+         Ride, Swap, Deliver, Repeat
         </motion.h1>
 
         <motion.h3
@@ -88,7 +88,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <i>Smarter Rides, Elevated Vibes</i>
+            <i>  Ride, Swap, Deliver, Repeat</i>
           </motion.h1>
 
           <motion.h3
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
           <Button
             variant="outline"
-            href="#/contact-us"
+            href="#contact-us"
             size="md"
             className="mt-8 inline-flex justify-center items-center rounded-lg border border-gray-300 bg-white text-gray-900 font-extralight shadow-sm hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30 transition-colors duration-300 px-6 py-3 text-base"
           >

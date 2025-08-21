@@ -8,7 +8,7 @@ import Footer from "@/components/Footer/Footer";
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#1c1b22',
+  themeColor: '#1E1E1E',
 }
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/lytelabs_logo.png", sizes: "180x180", type: "image/png" }],
   },
   other: {
-    "theme-color": "#1c1b22",
+    "theme-color": "#1E1E1E",
   },
 };
 export default function RootLayout({
@@ -57,7 +57,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased font-inter">
         <AnimatedNavbar />
-        <main className="bg-[#1c1b22 text-white min-h-screen ">{children}</main>
+        <main className="bg-[#1E1E1E text-white min-h-screen ">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,27 +1,27 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import FooterForm from "./FooterForm";
-const NAV_COLUMNS = [
-  {
-    links: [
-      { href: "/", label: "Accessibility Statement" },
-      { href: "#", label: "Privacy Policy" },
-    ],
-  },
-];
+// const NAV_COLUMNS = [
+//   {
+//     links: [
+//       { href: "/", label: "Accessibility Statement" },
+//       { href: "#", label: "Privacy Policy" },
+//     ],
+//   },
+// ];
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1c1b22] text-white" id="contact-us">
+    <footer className="bg-[#1E1E1E] text-white" id="contact-us">
       <div className="max-w-screen w-full mx-auto md:p-10 p-6">
         <h2 className="sm:hidden mb-8">
-          <i> Contact Us</i>
+          <i> Join our Waitlist </i>
         </h2>
         <h1 className="mb-8 hidden sm:block">
-          <i> Contact Us</i>
+           <i> Join our Waitlist </i>
         </h1>
         <div className="grid md:grid-cols-2 gap-12 pb-12">
           <div>
@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div className="flex flex-col mt-auto sm:place-items-end justify-baseline text-white font-light text-sm ">
             <div>
-              <ul className="">
+              {/* <ul className="">
                 {NAV_COLUMNS[0].links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="underline">
@@ -38,10 +38,10 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
               <div className="my-6">
                 <h4 className="text-sm  font-light">
-                  +234 123-456-7890
+                  +234 812-143-1583
                 </h4>
                 <h4 className="text-sm font-light">Lagos state, Nigeria.</h4>
               </div>

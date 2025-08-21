@@ -93,7 +93,7 @@ const OurStory = () => {
         animate={"visible"}
         className={styles.background}
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${"/Market.avif"})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${"/team.avif"})`,
         }}
       />
 

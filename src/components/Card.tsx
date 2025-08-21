@@ -11,7 +11,7 @@ interface InfoCardProps {
 const InfoCard: React.FC<InfoCardProps> = ({ title, description, icon, className }) => {
   return (
     <div
-      className={`bg-[#1c1b22] border border-white/20 rounded-xl p-6 flex flex-col justify-between h-60 w-full max-w-sm ${className}`}
+      className={`bg-[#1E1E1E] border border-white/20 rounded-xl p-6 flex flex-col justify-between h-60 w-full max-w-sm ${className}`}
     >
       <h3 className="text-white text-xl font-semibold mb-6">{title}</h3>
 

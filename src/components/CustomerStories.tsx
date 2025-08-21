@@ -29,9 +29,9 @@ export default function CustomerStories({
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-transparent border border-white rounded-lg p-4 sm:p-6 flex flex-col w-full justify-between min-h-[240px] sm:min-h-[260px] lg:min-h-[280px]"
+              className="bg-transparent border border-white rounded-lg p-4 sm:p-6 flex flex-col w-full justify-between min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]"
             >
-              <p className="text-gray-200 leading-relaxed mb-4 sm:mb-6 flex-1 text-sm sm:text-base">
+              <p className="text-gray-200 leading-relaxed mb-4 flex-1 text-sm sm:text-base">
                 {testimonial.quote}
               </p>
               <i className="mt-auto">

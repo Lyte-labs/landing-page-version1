@@ -98,7 +98,7 @@ export default function AnimatedNavbar() {
   const navbarClass =
     isMounted && scrolled
       ? "bg-transparent text-white"
-      : "bg-gray-800 text-white";
+      : "bg-[#276D4F] text-white";
 
   return (
     <nav
@@ -158,7 +158,7 @@ export default function AnimatedNavbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[99999] bg-[#1c1b22] text-white flex flex-col items-center justify-start p-4 sm:p-8"
+            className="fixed inset-0 z-[99999] bg-[#1E1E1E] text-white flex flex-col items-center justify-start p-4 sm:p-8"
             style={{
               position: "fixed",
               top: 0,

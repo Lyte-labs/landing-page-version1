@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import FloatingTextarea from "../FloatingTextarea";
+// import FloatingTextarea from "../FloatingTextarea";
 import FloatingInput from "../FloatingInput";
 
 export default function FooterContactForm() {
@@ -9,6 +9,7 @@ export default function FooterContactForm() {
     name: "",
     email: "",
     message: "",
+    phone: '',
     subscribe: false,
   });
   const [submitted, setSubmitted] = useState(false);
@@ -87,10 +88,10 @@ export default function FooterContactForm() {
             onChange={handleChange}
           />
 
-          <FloatingTextarea
-            id="message"
-            label="Your Message"
-            value={formData.message}
+          <FloatingInput
+            id="phone"
+            label="Phone Number"
+            value={formData.phone}
             onChange={handleChange}
           />
 
@@ -103,7 +104,7 @@ export default function FooterContactForm() {
                     hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30
                duration-300"
           >
-            Contact Us
+           Join Now
           </motion.button>
         </form>
       )}

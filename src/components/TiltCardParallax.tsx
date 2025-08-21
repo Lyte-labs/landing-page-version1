@@ -4,6 +4,7 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import Button from "./Button";
 
 const TiltCardParallax = () => {
   const sectionRef = useRef(null);
@@ -59,26 +60,26 @@ const TiltCardParallax = () => {
          <div className="sm:hidden pr-4">
           <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
             <i>
-               Limited Time Offer 15% Off
+               Join Waitlist
           </i>
           </h2>
         </div>
         <div className="hidden sm:block">
          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">
           <i>
-               Limited Time Offer 15% Off
+               Join Waitlist
           </i>
        
         </h1>
         </div>
         <p className="text-sm sm:text-base md:text-base lg:text-base mb-4 sm:mb-5 leading-relaxed">
           Experience the freedom of smooth rides
-          <span className=""> with Lytelabs ev-bikes at a special discounted rate.</span>
-          <span className="hidden sm:inline">with Lytlabs e-bikes at a special <br /> discounted rate.</span>
+          <span className=""> with Lytelabs ev-bikes.</span>
+          <span className="hidden sm:inline"> Join our waitlist today and secure your spot for <br /> the future of effortless commuting</span>
         </p>
-        <button className="bg-white text-neutral-500 font-medium py-2 sm:py-2 lg:py-2 px-6 sm:px-8 lg:px-10 rounded-md shadow hover:bg-neutral-100 text-sm sm:text-base transition-colors">
-          Ride Now
-        </button>
+        <Button href="#contact-us" variant="outline" className="inline-flex justify-center items-center rounded-lg border border-gray-300 bg-white text-gray-900 shadow-sm hover:bg-transparent hover:text-white focus:outline-none focus:ring-4 focus:ring-accent/30 transition-colors duration-300 px-10 py-2 text-base font-medium">
+          Join Now
+        </Button>
       </motion.div>
     </section>
   );

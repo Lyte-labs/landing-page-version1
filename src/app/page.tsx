@@ -27,21 +27,21 @@ export default function Home() {
           testimonials={[
             {
               quote:
-                "A. Serrano's e-bikes have truly transformed my daily commute. The advanced features and stylish design have made me feel more connected to the city.",
-              author: "Sophie Carter,",
-              title: "Commuter",
+                "The thing marama. The thing go well. I like am. Make una finish am quick, i don tire for the normal bicycle.",
+              author: "Collins, ",
+              title: "Glovo Dispatch Rider",
             },
             {
               quote:
-                "I can't imagine riding without A. Serrano e-bikes now. The eco-friendly design and smooth rides have been a game-changer for my urban adventures.",
-              author: "Mark Johnson, ",
-              title: "Urban Explorer",
+                "I like what you guys are doing, once everything is working well as expected, I am sure all riders will switch to your product.",
+              author: "Ubong, ",
+              title: "Chowdeck Dispatch Rider",
             },
             {
               quote:
-                "A. Serrano has exceeded my expectations. The e-bikes' performance and durability are unparalleled, providing me with the freedom to explore with ease.",
-              author: "Eva Martinez, ",
-              title: "Adventurer",
+                "When will it launch? Once everything is fixed, the speed is increased, I will purchase it, money is not a problem, as long as it delivers for me.",
+              author: "Emmanuel, ",
+               title: "Chowdeck Dispatch Rider",
             },
           ]}
         />

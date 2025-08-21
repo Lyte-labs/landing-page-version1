@@ -94,7 +94,7 @@ const config: Config = {
         info: '#3B82F6',
 
         // Background colors
-        background: '#1c1b22',
+        background: '#1E1E1E',
         backgroundSecondary: '#f8f9fa',
         surface: '#ffffff',
         surfaceDark: '#1f2937',
