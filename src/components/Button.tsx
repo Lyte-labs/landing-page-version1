@@ -4,9 +4,6 @@ import React from 'react'
 import Link from 'next/link'
 import { LazyMotion, domAnimation, m, MotionProps } from 'framer-motion'
 
-/**
- * Simple classnames helper
- */
 function cn(...classes: (string | undefined)[]) {
   return classes.filter(Boolean).join(' ')
 }

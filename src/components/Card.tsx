@@ -1,11 +1,10 @@
-// components/InfoCard.tsx
 import React from 'react';
 
 interface InfoCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
-  className?: string; // optional extra styles
+  className?: string; 
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, description, icon, className }) => {

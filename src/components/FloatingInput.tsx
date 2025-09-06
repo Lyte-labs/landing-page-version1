@@ -1,4 +1,3 @@
-// Floating Input Component
 export default function FloatingInput({
   id,
   label,
